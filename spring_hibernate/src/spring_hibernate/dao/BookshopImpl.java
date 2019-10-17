@@ -41,6 +41,7 @@ public class BookshopImpl implements Bookshop {
 
 	@Override
 	public void updateAccount(String username, Integer price) {
+		//¿À¨dæl√B
 		String check_hql = "Select a.balance From Account a Where a.username=?";
 		int left = (int) getSession().createQuery(check_hql).setString(0, username).uniqueResult();
 		if(left<price) {
